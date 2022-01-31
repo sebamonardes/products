@@ -1,8 +1,6 @@
 package main
 
-import (
-	"products/service"
-)
+import "products/service"
 
 /**func (p product) getProducts() {
 	bs, err := ioutil.ReadFile("products.json")
@@ -15,5 +13,10 @@ import (
 }**/
 
 func main() {
-	service.GetProducts("products.json")
+	//service.GetProducts("products.json")
+
+	//ctx := context.Background()
+	//service.Produce(ctx)
+
+	service.Consume()
 }

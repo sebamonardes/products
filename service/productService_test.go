@@ -1,7 +1,6 @@
 package service
 
 import (
-	"github.com/stretchr/testify/assert"
 	"os"
 	"os/exec"
 	"testing"
@@ -19,12 +18,6 @@ func TestReadFromFile(t *testing.T) {
 			t.Errorf("Expected price greater than 0, but price is %v", product.Price)
 		}
 	}
-}
-
-func TestGetProductsFileNotExist(t *testing.T) {
-	assert.AnError(t, GetProducts("noFile.json"))
-	products := GetProducts("noFile.json")
-
 }
 
 func TestReadFromFileNotExistFile(t *testing.T) {
